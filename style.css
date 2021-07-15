@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    color: rgb(0, 247, 255);
+    text-decoration: none;
+}
+.contain{
+    text-align: center;
+    background-color: black;
+    width: 100vw;
+    height: 400px;
+    background-image: url("./image/back.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:top;
+    position: relative;
+}
+.profiles{
+    position: absolute;
+    bottom: -151px;
+    left: 80px;
+    
+}
+.data{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.image{
+    width: 250px;
+    height: 250px;
+    background-color: #d8dbdb;
+    border: 10px solid #99fdfe;
+    background-image: url('./image/me-white.png');
+    background-size: contain;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: flicker 1.5s infinite alternate;
+    
+}
+
+.links{
+    margin-top: 200px;
+    display: flex;
+}
+.link{
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgb(22, 17, 17);
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: x-large;
+    font-weight: bold;
+    position: relative;
+}
+.progress{
+    width: 250px;
+    height: 15px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 30px;
+}
+.progress::after{
+    content: "";
+    height: 15px;
+    width: 100px;
+    background-color: rgb(0, 247, 255);
+
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        box-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 9px #fff,
+        0 0 10px rgb(0, 247, 255),
+        0 0 20px rgb(0, 247, 255),
+        0 0 10px rgb(0, 195, 255),
+        0 0 15px rgb(0, 255, 242),
+        0 0 50px rgb(0, 225, 255);
+    
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+  }
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.icon img{
+      width: 30px;
+      height: 30px;
+      margin: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .profiles{
+        display: block;
+        width: 350px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .image{
+        margin: auto;
+    }
+    .data{
+        text-align: center;
+    }
+}
